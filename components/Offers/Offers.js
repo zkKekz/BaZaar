@@ -4,6 +4,10 @@ import styles from "../../styles/Offers.module.css";
 
 import Image from "next/image";
 
+import Link from "next/link";
+
+import { FaInfoCircle } from "react-icons/fa";
+
 import MrZango from "../../assets/images/MrZango.svg";
 
 export const Offers = () => {
@@ -47,9 +51,9 @@ export const Offers = () => {
                 className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
             >
                 <h2 className="text-2xl">All On-Chain Offers ⛓</h2>
-                <p>
+                <p className="text-xl">
                     All offers are pulled directly from the Zano Blockchain via
-                    the Zano Markerplace API. There are no centralized offers!a
+                    the Zano Markerplace API. There are no centralized offers.
                 </p>
             </div>
 
@@ -61,32 +65,57 @@ export const Offers = () => {
 
             {offers && (
                 <div className="pl-5 pr-5 pt-8 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40">
-                    <div
-                        className={`${styles.cardContainer} grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4`}
-                    >
-                        <div
-                            className={`${styles.card} bg-gray-800 border-cyan-400 border-2`}
-                        >
-                            <div className={`${styles.cardImage}`}>
-                                <Image
-                                    src={MrZango}
-                                    width={550}
-                                    alt={""}
-                                    as="image"
-                                    priority={true}
-                                />
-                            </div>
-                            <div className={`${styles.cardContainer} p-3 bg-gray-900`}>
-                                <h2 className={`${{}} text-2xl`}>
-                                    <b>MrZango</b>
-                                </h2>
-                                <p>
-                                    Lorem ipsum dolor, sit amet consectetur
-                                    adipisicing elit. Laborum aperiam velit quae
-                                    illo!
-                                </p>
-                            </div>
-                        </div>
+                    <div className={`${styles.cardContainer} grid gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 `}>
+
+                        {Object.entries(offers).map((key, index) => {
+                                return (
+                                    <Link key={key} href={`/`}>
+                                        <div
+                                            className={`${styles.card} bg-gray-900 border-cyan-400 border-2`}
+                                        >
+                                            <div
+                                                className={`${styles.cardHeader} flex grow justify-between bg-gray-800 p-3`}
+                                            >
+                                                <h3 className="text-2xl">
+                                                    Item(s): #{offers[index].at}
+                                                </h3>
+                                                <FaInfoCircle className="text-3xl" />
+                                            </div>
+                                            <div
+                                                className={`${styles.cardImage}`}
+                                            >
+                                                <Image
+                                                    src={MrZango}
+                                                    width={600}
+                                                    alt={""}
+                                                    as="image"
+                                                    priority={true}
+                                                />
+                                            </div>
+                                            <div
+                                                className={`${styles.cardBody} p-3 bg-gray-900`}
+                                            >
+                                                <div className="">
+                                                    <h2
+                                                        className={`${{}} text-3xl pb-5`}
+                                                    >
+                                                        <b>{offers[index].t}</b>
+                                                    </h2>
+                                                </div>
+                                                <div className="pb-5">
+                                                    <p>{offers[index].com}</p>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                className={`${styles.cardFooter}`}
+                                            ></div>
+                                        </div>
+                                    </Link>
+                                );
+                            })}
+
+
                     </div>
                 </div>
             )}
