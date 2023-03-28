@@ -1,0 +1,21 @@
+.offers {
+    background: rgb(17, 24, 39);
+    background: linear-gradient(180deg, rgba(17, 24, 39, 1) 0%, rgba(31, 41, 55, 1) 100%);
+}
+
+.container{}
+
+.cardContainer {}
+
+.card {
+    box-shadow: 10px 10px 40px #030712;
+    transition: 0.3s;
+}
+
+.card:hover {
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    box-shadow: 10px 10px 40px #030712;
+    transition: 0.2s;
+}

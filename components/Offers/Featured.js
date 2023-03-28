@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 
 
-import styles from "../../styles/Index.module.css"
+import styles from "../../styles/Offers.module.css"
 
 export const Featured = () => {
 
