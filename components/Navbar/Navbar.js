@@ -12,7 +12,13 @@ export const Navbar = () => {
           <div
               className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
           >
-              <Image src={BazaarLogo} width={150} alt={""} />
+              <Image
+                  src={BazaarLogo}
+                  width={150}
+                  alt={""}
+                  as="image"
+                  priority={true}
+              />
           </div>
       </div>
   );

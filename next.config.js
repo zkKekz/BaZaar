@@ -31,14 +31,14 @@ const nextConfig = {
     reactStrictMode: true,
 
     // proxy rewrites
-    async rewrites() {
-        return [
-            {
-                source: "/kekzploit",
-                destination: "/",
-            },
-        ];
-    },
+    // async rewrites() {
+    //     return [
+    //         {
+    //             source: "/",
+    //             destination: "/",
+    //         },
+    //     ];
+    // },
 
     // website headers
     async headers() {

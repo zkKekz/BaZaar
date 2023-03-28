@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+
+
 
 import styles from "../../styles/Index.module.css"
 
 export const Featured = () => {
+
+    useEffect(() => {});
+
   return (
       <div className={`${styles.index} text-white  pt-10 pb-10`}>
           <div

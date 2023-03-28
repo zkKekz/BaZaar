@@ -25,6 +25,8 @@ export const Links = () => {
                       src={BazaarLogo}
                       width={120}
                       alt={""}
+                      as="image"
+                      priority={true}
                       className="pb-3"
                   />
                   <h2>
