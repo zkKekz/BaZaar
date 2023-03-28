@@ -1,0 +1,14 @@
+.footerLinks {
+        background: rgb(31, 41, 55);
+        background: linear-gradient(180deg, rgba(31, 41, 55, 1) 0%, rgba(17, 24, 39, 1) 100%);
+}
+
+.icon {
+    font-size: 1.7em;
+    padding-right: 0.8em;
+}
+
+.socials {
+    justify-content: center;
+    align-self: center;
+}

@@ -3,6 +3,9 @@ import Head from "next/head";
 import { useContext } from "react";
 import { DefaultContext } from "../context/context";
 
+import { Intro } from "@/components/Intro/Intro";
+import { Index } from "@/components/Index/Index";
+
 export default function Home() {
     const { value, setValue } = useContext(DefaultContext);
 
@@ -20,8 +23,9 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main>
-                <h1 className="text-3xl font-bold underline">{value}</h1>
+            <main className={`${{}} bg-slate-800`}>
+                <Intro/>
+                <Index/>
             </main>
         </>
     );
