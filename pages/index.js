@@ -4,7 +4,8 @@ import { useContext } from "react";
 import { DefaultContext } from "../context/context";
 
 import { Intro } from "@/components/Intro/Intro";
-import { Index } from "@/components/Index/Index";
+import { Featured} from "@/components/Offers/Featured";
+import { Offers } from "@/components/Offers/Offers";
 
 export default function Home() {
     const { value, setValue } = useContext(DefaultContext);
@@ -25,7 +26,8 @@ export default function Home() {
             </Head>
             <main className={`${{}} bg-slate-800`}>
                 <Intro/>
-                <Index/>
+                <Featured/>
+                <Offers/>
             </main>
         </>
     );

@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
       <div className={`${styles.footer}`}>
           <div className={`${styles.container}`}>
-              <Utility />
+              {/* <Utility /> */}
               <Links />
               <Copyright />
           </div>
