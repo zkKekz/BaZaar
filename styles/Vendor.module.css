@@ -3,3 +3,8 @@
 .container {
     text-align: center;
 }
+
+.vendorHeader {
+    justify-content: center;
+    align-items: center;
+}
