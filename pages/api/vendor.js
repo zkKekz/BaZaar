@@ -7,16 +7,25 @@ export default async function handler(req, res) {
 
     switch (req.method) {
         case "POST":
-            let bodyObject = JSON.parse(req.body);
-            let myPost = await db.collection("vendors").insertOne(bodyObject);
-            res.json(myPost.ops[0]);
+            // let bodyObject = JSON.parse(req.body);
+            // console.log(req.body.url);
+            let findUrl = await db
+                .collection("vendors")
+                .find({ url: req.body.url })
+                .toArray();
+
+            // console.log(req.body.url);
+            res.json({ status: 200, data: findUrl });
             break;
+
+        // twitter: req.body.socials.twitter,
 
         case "GET":
             const allVendors = await db
                 .collection("vendors")
                 .find({})
                 .toArray();
+            console.log(allVendors);
             res.json({ status: 200, data: allVendors });
             break;
     }

@@ -12,14 +12,17 @@ const Vendor = () => {
 
     useEffect(() => {
         console.clear();
+        console.log(vendor);
+
         const fetchVendors = async () => {
             try {
                 setVendorsLoading(true);
-                await fetch("/api/vendors", {
-                    method: "GET",
+                await fetch("/api/vendor", {
+                    method: "POST",
                     headers: {
                         "Content-Type": "application/json",
                     },
+                    body: JSON.stringify({ url: vendor }),
                 })
                     .then((response) => response.json())
                     .then((data) => {
@@ -36,16 +39,37 @@ const Vendor = () => {
         };
 
         fetchVendors();
-    }, []);
+    }, [vendor]);
 
-    // console.log(vendors);
+    console.log(vendors);
 
     return (
         <div className={`${styles.vendors} bg-gray-900`}>
             <div
                 className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
             >
-                <h1 className="text-3xl text-white">Vendor: {vendor}</h1>
+                {/* {Object.entries(vendors).map((key, index) => {})} */}
+                {vendorsLoading && (
+                    <h1 className="text-3xl text-white">
+                        Loading Vendor BaZaar..
+                    </h1>
+                )}
+
+                {!vendorsLoading && vendors.length == 0 && (
+                    <h1 className="text-3xl text-white">Invalid Vendor URL</h1>
+                )}
+
+                {!vendorsLoading && vendors.length > 0 && (
+                    <div>
+                        {Object.entries(vendors).map((key, index) => {
+                            return (
+                                <h1 key={key} className="text-3xl text-white">
+                                    Loaded: {vendors[0].title}
+                                </h1>
+                            );
+                        })}
+                    </div>
+                )}
             </div>
         </div>
     );
