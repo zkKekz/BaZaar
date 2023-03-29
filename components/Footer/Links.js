@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react'
 
 import styles from "../../styles/FooterLinks.module.css";
@@ -11,7 +12,6 @@ import {
     FaGithub,
     FaDiscord,
     FaTwitter,
-    FaStaylinked,
 } from "react-icons/fa";
 
 export const Links = () => {

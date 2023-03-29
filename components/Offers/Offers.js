@@ -8,7 +8,7 @@ import Link from "next/link";
 
 import { FaInfoCircle } from "react-icons/fa";
 
-import MrZango from "../../assets/images/MrZango.svg";
+import NoImage from "../../assets/images/No_image.svg";
 
 export const Offers = () => {
 
@@ -43,7 +43,7 @@ export const Offers = () => {
         fetchOffers()
     }, []);
 
-    console.log(offers)
+    // console.log(offers)
 
     return (
         <div className={`${styles.offers} text-white  pt-10 pb-10`}>
@@ -84,14 +84,26 @@ export const Offers = () => {
                                             <div
                                                 className={`${styles.cardImage}`}
                                             >
-                                                <Image
-                                                    src={`https://ipfs.io/ipfs/${offers[index].url}`}
-                                                    width={600}
-                                                    height={600}
-                                                    alt={""}
-                                                    as="image"
-                                                    priority={true}
-                                                />
+                                                {offers[index].url == "" && (
+                                                    <Image
+                                                        src={NoImage}
+                                                        width={600}
+                                                        height={600}
+                                                        alt={""}
+                                                        as="image"
+                                                        priority={true}
+                                                    />
+                                                )}
+                                                {offers[index].url != "" && (
+                                                    <Image
+                                                        src={`https://ipfs.io/ipfs/${offers[index].url}`}
+                                                        width={600}
+                                                        height={600}
+                                                        alt={""}
+                                                        as="image"
+                                                        priority={true}
+                                                    />
+                                                )}
                                             </div>
                                             <div
                                                 className={`${styles.cardBody} p-3 bg-gray-900`}
