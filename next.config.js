@@ -53,7 +53,7 @@ const nextConfig = {
 
     // allowed external images
     images: {
-        domains: ["example.com"],
+        domains: ["ipfs.io"],
     },
 };
 

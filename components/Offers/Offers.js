@@ -85,8 +85,9 @@ export const Offers = () => {
                                                 className={`${styles.cardImage}`}
                                             >
                                                 <Image
-                                                    src={MrZango}
+                                                    src={`https://ipfs.io/ipfs/${offers[index].url}`}
                                                     width={600}
+                                                    height={600}
                                                     alt={""}
                                                     as="image"
                                                     priority={true}

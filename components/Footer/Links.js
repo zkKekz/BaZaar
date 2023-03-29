@@ -29,11 +29,17 @@ export const Links = () => {
                       priority={true}
                       className="pb-3"
                   />
-                  <h2>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Neque mollitia impedit quibusdam sapiente corporis
-                      excepturi.
-                  </h2>
+                  <p className="text-xl">
+                      <i>
+                          "Privacy is necessary for an open society in the
+                          electronic age. Privacy is not secrecy. A private
+                          matter is something one doesn't want the whole world
+                          to know, but a secret matter is something one doesn't
+                          want anybody to know. Privacy is the power to
+                          selectively reveal oneself to the world." - A
+                          Cypherpunks Manifesto
+                      </i>
+                  </p>
               </div>
               <div className={`${styles.socials} flex`}>
                   <a href="" className={styles.icon}>

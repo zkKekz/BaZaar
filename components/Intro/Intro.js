@@ -15,7 +15,7 @@ export const Intro = () => {
           <div className={`${styles.container} pl-8 pr-8 flex justify-center`}>
               <Image
                   src={BazaarIntro}
-                  width={450}
+                  width={650}
                   alt={""}
                   as="image"
                   priority={true}
