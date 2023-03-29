@@ -47,7 +47,9 @@ export const Featured = () => {
     // console.log(vendors);
 
     return (
-        <div className={`${styles.offers} text-white  pt-10 pb-10`}>
+        <div
+            className={`${styles.offers} text-white  pt-10 pb-10 border-b-2  border-b-indigo-500 border-t-2  border-t-indigo-500`}
+        >
             <div
                 className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
             >

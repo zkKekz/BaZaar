@@ -17,9 +17,11 @@ import {
 
 export const Links = () => {
     return (
-        <div className={`${styles.footerLinks}`}>
+        <div
+            className={`${styles.footerLinks} border-b-2  border-b-indigo-500`}
+        >
             <div
-                className={`${styles.container} pl-5 pr-5 grid md:grid-cols-2 gap-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 text-white pt-8 pb-8`}
+                className={`${styles.container} pl-5 pr-5  md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 text-white pt-8 pb-8`}
             >
                 <div>
                     <Link href={"/"}>
@@ -31,17 +33,6 @@ export const Links = () => {
                             priority={true}
                         />
                     </Link>
-                    <p className="text-xl pt-5">
-                        <i>
-                            "Privacy is necessary for an open society in the
-                            electronic age. Privacy is not secrecy. A private
-                            matter is something one doesn't want the whole world
-                            to know, but a secret matter is something one
-                            doesn't want anybody to know. Privacy is the power
-                            to selectively reveal oneself to the world." - A
-                            Cypherpunks Manifesto
-                        </i>
-                    </p>
                 </div>
                 <div className={`${styles.socials} flex`}>
                     <a href="" className={styles.icon}>

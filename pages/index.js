@@ -4,8 +4,10 @@ import { useContext } from "react";
 import { DefaultContext } from "../context/context";
 
 import { Intro } from "@/components/Intro/Intro";
-import { Featured} from "@/components/Offers/Featured";
+import { Featured } from "@/components/Offers/Featured";
 import { Offers } from "@/components/Offers/Offers";
+
+import styles from "../styles/Intro.module.css";
 
 export default function Home() {
     const { value, setValue } = useContext(DefaultContext);
@@ -24,10 +26,10 @@ export default function Home() {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <main className={`${{}} bg-slate-800`}>
-                <Intro/>
-                <Featured/>
-                <Offers/>
+            <main className={`${styles.intro}`}>
+                <Intro />
+                <Featured />
+                <Offers />
             </main>
         </>
     );

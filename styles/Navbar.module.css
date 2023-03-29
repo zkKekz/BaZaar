@@ -1,0 +1,8 @@
+.nav {
+    background: rgb(17, 24, 39);
+    background: linear-gradient(
+        90deg,
+        rgba(17, 24, 39, 1) 0%,
+        rgba(38, 39, 56, 1) 100%
+    );
+}
