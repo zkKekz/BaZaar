@@ -60,10 +60,16 @@ Once your link is generated, copy it and head over to your [Zano Wallet](https:/
 
 ## Step 2:
 
-Fire up your [Zano Wallet](https://zano.org/downloads) and copy/pase your generated link into the comments section:
+Fire up your [Zano Wallet](https://zano.org/downloads) and copy/paste your generated link into the comments section:
 
 <div align="left">
     <img title="" src="assets/images/signup.png" alt="Mr Zango Image" data-align="center" width="700">
 </div>
 
 The amount you send dictates which account Tier is set up, this process is automated and cant be undone so make sure you send the correct amount. See the above price Costs and account Tiers section.
+
+## Congratulations, your BaZaar is set up!
+
+Once the transaction is confirmed on the blockchain, your BaZaar will be visibile and youll be able to log in.
+
+**NOTE: if you didnt set up a featured BaZaar, you'll have to keep an eye on the [Blockchain Explorer](https://explorer.zano.org) to check whether the Blockchain has confirmed your transaction, otherwise you'll see the BaZaar appear on the front page 'Featured Vendors' section.**
