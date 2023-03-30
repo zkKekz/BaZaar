@@ -58,8 +58,6 @@ Navigate to the [vendor registration page](https://zanobazaar.com/register/) and
 
 Once your link is generated, copy it and head over to your [Zano Wallet](https://zano.org/downloads) to set up your vendor account.
 
-
-
 ## IPFS Images
 
 The BaZaar likes people to use IPFS for uploading images, so currently only use IPFS for images or they wont be visable, using IPFS is really easy with [IPFS desktop](https://docs.ipfs.tech/install/ipfs-desktop/).
@@ -120,4 +118,10 @@ Simply fire up your wallet, and click on the transaction to the BaZaar and copy 
 
 # Go explore
 
-Nice, youve set up your BaZaar, now go and explore your account and get selling stuffs!
+Nice, you've set up your BaZaar, now go and explore your account and get selling stuffs!
+
+
+
+# Remember, you're early!
+
+Zano BaZaar is in its infancy, so make sure to report any issues, suggestions or ideas, you can do this over on [Telegram](https://t.me/ZanoBazaar) or just head over to [Zano's Discord](https://discord.com/invite/wE3rmYY) server where you can usually find me (kekzploit).
