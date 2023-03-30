@@ -95,17 +95,24 @@ export const Featured = () => {
                         >
                             {Object.entries(vendors).map((key, index) => {
                                 return (
-                                    <SwiperSlide
-                                        key={key}
-                                        className="border-cyan-400 border-2"
-                                    >
-                                        <div>
+                                    <SwiperSlide key={key} className="">
+                                        <div className="border-2 rounded-t-md border-indigo-500">
+                                            <div
+                                                className={`${styles.cardContainer} bg-violet-900 p-2 rounded-t-md`}
+                                            >
+                                                <h3 className="text-xl text-white text-center">
+                                                    <b>
+                                                        {vendors[index].title}
+                                                    </b>
+                                                </h3>
+                                            </div>
                                             {vendors[index].image == "" && (
                                                 <Link
                                                     href={`vendor/${vendors[index].url}`}
                                                 >
                                                     <Image
                                                         src={NoImage}
+                                                        className="`"
                                                         width={600}
                                                         height={600}
                                                         alt={""}
@@ -129,9 +136,9 @@ export const Featured = () => {
                                                 </Link>
                                             )}
                                         </div>
-                                        <div className="bg-gray-900 p-4">
+                                        {/* <div className="bg-violet-500 p-2 rounded-b-md">
                                             Hey
-                                        </div>
+                                        </div> */}
                                     </SwiperSlide>
                                 );
                             })}

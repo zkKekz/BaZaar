@@ -1,11 +1,24 @@
 .offers {
     background: rgb(17, 24, 39);
-    background: linear-gradient(180deg, rgba(17, 24, 39, 1) 0%, rgba(31, 41, 55, 1) 100%);
+    background: linear-gradient(
+        180deg,
+        rgba(17, 24, 39, 1) 0%,
+        rgba(31, 41, 55, 1) 100%
+    );
 }
 
-.container{}
+.container {
+}
 
-.cardContainer {}
+.cardContainer {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+        90deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(181, 0, 255, 1) 100%
+    );
+}
 
 .card {
     box-shadow: 10px 10px 40px #030712;
@@ -21,5 +34,5 @@
 }
 
 .buttonLink {
-        bottom: 0;
+    bottom: 0;
 }
