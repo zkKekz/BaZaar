@@ -1,4 +1,4 @@
-<div>
+<div align="center>
     <img title="" src="assets/images/RedactedMrZango.png" alt="Mr Zango Image" data-align="center" width="400">
 </div>
 
