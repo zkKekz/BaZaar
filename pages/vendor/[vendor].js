@@ -49,7 +49,7 @@ const Vendor = () => {
     console.log(vendors);
 
     return (
-        <div className={`${styles.vendors} bg-gray-900`}>
+        <div className={`${styles.vendors} bg-gray-900 pt-10`}>
             <div
                 className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
             >

@@ -81,7 +81,7 @@ export const Offers = () => {
                                             className={`${styles.cardHeader} flex grow justify-between bg-gray-800 p-3`}
                                         >
                                             <h3 className="text-2xl">
-                                                Item(s): #{offers[index].at}
+                                                {offers[index].ap} $ZANO
                                             </h3>
                                             <FaInfoCircle className="text-3xl" />
                                         </div>

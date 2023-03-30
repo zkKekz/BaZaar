@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "react-responsive-modal/styles.css";
 
 import { ContextProvider } from "../context/context";
 
