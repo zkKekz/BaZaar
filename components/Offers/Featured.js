@@ -129,6 +129,9 @@ export const Featured = () => {
                                                 </Link>
                                             )}
                                         </div>
+                                        <div className="bg-gray-900 p-4">
+                                            Hey
+                                        </div>
                                     </SwiperSlide>
                                 );
                             })}

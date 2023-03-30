@@ -108,7 +108,7 @@ const Vendor = () => {
 
             {!vendorsLoading && vendors.length > 0 && (
                 <div
-                    className={`${styles.vendorIntro} text- border-b-2  border-b-indigo-500 `}
+                    className={`${styles.vendorIntro} text- border-b-2  border-b-indigo-500 pt-10 pb-10 `}
                 >
                     <div
                         className={`${styles.vendorContent} grid justify-center md:grid-cols-2 gap-5 pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 p-5 text-white`}
