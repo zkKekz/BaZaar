@@ -97,10 +97,13 @@ export const Featured = () => {
                         >
                             {Object.entries(vendors).map((key, index) => {
                                 return (
-                                    <>
+                                    <div key={key}>
                                         {vendors[index].type == "featured" && (
-                                            <SwiperSlide key={key}>
-                                                <div className="border-2 rounded-t-md border-indigo-500 ">
+                                            <SwiperSlide>
+                                                <div
+                                                    key={key}
+                                                    className="border-2 rounded-t-md border-indigo-500 "
+                                                >
                                                     <div
                                                         className={`${styles.cardContainer}  p-2 rounded-t-md border-b-2 border-b-indigo-500`}
                                                     >
@@ -148,7 +151,7 @@ export const Featured = () => {
                                                 </div>
                                             </SwiperSlide>
                                         )}
-                                    </>
+                                    </div>
                                 );
                             })}
                         </Swiper>

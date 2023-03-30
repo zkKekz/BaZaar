@@ -25,7 +25,6 @@ export default async function handler(req, res) {
                 .collection("vendors")
                 .find({})
                 .toArray();
-            console.log(allVendors);
             res.json({ status: 200, data: allVendors });
             break;
     }

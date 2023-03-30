@@ -89,9 +89,6 @@ const Vendor = () => {
         fetchOffers();
     }, [vendor]);
 
-    console.log(vendors);
-    console.log(offers);
-
     return (
         <div className={`${styles.vendors} bg-gray-900`}>
             <div
