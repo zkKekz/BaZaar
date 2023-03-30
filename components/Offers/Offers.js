@@ -59,7 +59,7 @@ export const Offers = () => {
 
             {!offers && (
                 <div className="pl-5 pr-5 pt-8 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40">
-                    <h2 className="text-2xl">No current offers</h2>
+                    <h2 className="text-2xl">No current offers to show 😥</h2>
                 </div>
             )}
 

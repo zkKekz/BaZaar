@@ -23,14 +23,44 @@ export const Navbar = () => {
     const [vendors, setVendors] = useState(null);
     const [loggedIn, setLoggedIn] = useState(false);
 
+    const [mongoId, setMongoId] = useState("");
+
     const [txHashLogin, settxHashLogin] = useState("");
     const [secretLogin, setSecretLogin] = useState("");
 
+    const [offerInput, setOfferInput] = useState("");
+
     // modal
     const [open, setOpen] = useState(false);
-
     const onOpenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);
+
+    const addOffer = async (event) => {
+        event.preventDefault();
+
+        try {
+            await fetch("/api/offer", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    _id: mongoId,
+                    tx: offerInput,
+                }),
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                })
+                .catch((error) => {
+                    // eliminate this error
+                    console.error("Error:", error);
+                });
+        } catch (error) {
+            console.error("Error:", error);
+        }
+    };
 
     const logIn = async (event) => {
         event.preventDefault();
@@ -51,8 +81,7 @@ export const Navbar = () => {
                     ) {
                         setVendors(data.data[index]);
                         setLoggedIn(true);
-                    } else {
-                        console.log("no match");
+                        setMongoId(data.data[index]._id);
                     }
                 }
             })
@@ -179,19 +208,17 @@ export const Navbar = () => {
                 >
                     <div>
                         <div className="pb-5">
-                            <h2 key={{}} className="text-2xl pb-3">
+                            <h2 className="text-2xl pb-3">
                                 <u>{vendors.title}</u>
                             </h2>
-                            <h2 key={{}} className="text-xl pb-1">
-                                Share BaZaar URL:
-                            </h2>
+                            <h2 className="text-xl pb-1">Share BaZaar URL:</h2>
                             <p>https://zanobazaar.com/{vendors.url}</p>
                         </div>
 
                         <div>
                             <button
                                 onClick={onOpenModal}
-                                className="l bg-violet-500 p-1 rounded-md pl-1 pr-1"
+                                className=" bg-violet-500 p-1 rounded-md pl-1 pr-1"
                             >
                                 Add Offer
                             </button>
@@ -221,11 +248,17 @@ export const Navbar = () => {
                                         </h3>
                                         <input
                                             className="border-2 bg-slate-800 rounded-sm p-1 text-xl"
+                                            value={offerInput}
+                                            onChange={(event) => {
+                                                setOfferInput(
+                                                    event.target.value.trim()
+                                                );
+                                            }}
                                             type="text"
                                         />
                                         <button
                                             onClick={(event) => {
-                                                console.log("submit offer add");
+                                                addOffer(event);
                                             }}
                                             className="text-xl bg-violet-500 p-2 rounded-md pl-5 pr-5 mt-3"
                                         >
