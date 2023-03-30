@@ -6,8 +6,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "../../styles/Vendor.module.css";
+import offersStyles from "../../styles/Offers.module.css";
+
+import { FaInfoCircle } from "react-icons/fa";
 
 import NoImage from "../../assets/images/No_image.svg";
+
+import {
+    FaTwitter,
+    FaTelegramPlane,
+    FaDiscord,
+    FaGithub,
+} from "react-icons/fa";
 
 const Vendor = () => {
     const [vendorsLoading, setVendorsLoading] = useState(true);
@@ -78,11 +88,10 @@ const Vendor = () => {
     console.log(offers);
 
     return (
-        <div className={`${styles.vendors} bg-gray-900 pt-10`}>
+        <div className={`${styles.vendors} bg-gray-900`}>
             <div
-                className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 `}
+                className={`${styles.container} pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40  `}
             >
-                {/* {Object.entries(vendors).map((key, index) => {})} */}
                 {vendorsLoading && (
                     <h1 className="text-3xl text-white">
                         Loading Vendor BaZaar..
@@ -92,75 +101,163 @@ const Vendor = () => {
                 {!vendorsLoading && vendors.length == 0 && (
                     <h1 className="text-3xl text-white">Invalid Vendor URL</h1>
                 )}
+            </div>
 
-                {!vendorsLoading && vendors.length > 0 && (
-                    <div>
+            {!vendorsLoading && vendors.length > 0 && (
+                <div
+                    className={`${styles.vendorIntro} text- border-b-2  border-b-indigo-500 `}
+                >
+                    <div
+                        className={`${styles.vendorContent} grid justify-center md:grid-cols-2 gap-5 pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 p-5 text-white`}
+                    >
                         <div>
-                            {/* <div className="text-cyan-400 text-xl pt-5 pb-5">
-                                        <p>
-                                            https://zanobazaar.com/
-                                            {vendors[index].url}
-                                        </p>
-                                    </div> */}
-                            <div
-                                className={`${styles.vendorHeader} bg-gray-900 grid gap-5 md:grid-cols-2 text-white border-violet-400 border-2`}
-                            >
-                                <div>
-                                    {vendors[0].image == "" && (
-                                        <Image
-                                            src={NoImage}
-                                            width={750}
-                                            height={750}
-                                            alt={""}
-                                            as="image"
-                                            priority={true}
-                                        />
+                            <Image
+                                // className="border-2"
+                                src={`https://ipfs.io/ipfs/${vendors[0].image}`}
+                                width={400}
+                                height={400}
+                                alt={""}
+                                as="image"
+                                priority={true}
+                            />
+                        </div>
+                        <div className={`${{}} text-center`}>
+                            <h1 className="text-5xl pb-2">
+                                <b>{vendors[0].title}</b>
+                            </h1>
+                            <p className="text-2xl">{vendors[0].description}</p>
+                            <div>
+                                <div className="flex pt-5 text-3xl text-center justify-center">
+                                    {vendors[0].socials.twitter == "" && (
+                                        <Link
+                                            className="pl-2 pr-2"
+                                            href={vendors[0].socials.twitter}
+                                            target="_blank"
+                                        >
+                                            <FaTwitter />
+                                        </Link>
                                     )}
-                                    {vendors[0].image != "" && (
-                                        <Link href={`vendor/${vendors[0].url}`}>
-                                            <Image
-                                                src={`https://ipfs.io/ipfs/${vendors[0].image}`}
-                                                width={750}
-                                                height={750}
-                                                alt={""}
-                                                as="image"
-                                                priority={true}
-                                            />
+
+                                    {vendors[0].socials.telegram == "" && (
+                                        <Link
+                                            className="pl-2 pr-2"
+                                            href={vendors[0].socials.telegram}
+                                            target="_blank"
+                                        >
+                                            <FaTelegramPlane />
+                                        </Link>
+                                    )}
+
+                                    {vendors[0].socials.discord == "" && (
+                                        <Link
+                                            className="pl-2 pr-2"
+                                            href={vendors[0].socials.discord}
+                                            target="_blank"
+                                        >
+                                            <FaDiscord />
+                                        </Link>
+                                    )}
+
+                                    {vendors[0].socials.github == "" && (
+                                        <Link
+                                            className="pl-2 pr-2"
+                                            href={vendors[0].socials.github}
+                                            target="_blank"
+                                        >
+                                            <FaGithub />
                                         </Link>
                                     )}
                                 </div>
-                                <div
-                                    className={`${styles.headerContent} md:pt-8 pb-8 p-3`}
-                                >
-                                    <h1 className="text-5xl pb-5">
-                                        <b>{vendors[0].title}</b>
-                                    </h1>
-                                    <p className="text-2xl">
-                                        {" "}
-                                        {vendors[0].description}
-                                    </p>
-                                </div>
                             </div>
-                            <div className={`${{}} vendorCards`}></div>
                         </div>
                     </div>
-                )}
-            </div>
+                </div>
+            )}
+
             {!vendorsLoading && vendors.length > 0 && (
                 <div className="pb-8 text-white pl-5 pr-5 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40 pt-5">
-                    <h2 className="text-2xl pb-8">
+                    <h2 className="text-2xl ">
                         {vendors[0].title}'s Offers 🔥
                     </h2>
+                    <p className="text-xl">
+                        All offers are pulled directly from the Zano Blockchain
+                        via the Zano Markerplace API. There are no centralized
+                        offers.
+                    </p>
 
-                    {Object.entries(offers).map((key, index) => {
-                        if (vendors[0].offers.includes(offers[index].tx_hash)) {
-                            return (
-                                <div key={key} className=" ">
-                                    Hello
-                                </div>
-                            );
-                        }
-                    })}
+                    <div
+                        className={`pt-8 ${{}} grid gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 `}
+                    >
+                        {Object.entries(offers).map((key, index) => {
+                            if (
+                                vendors[0].offers.includes(
+                                    offers[index].tx_hash
+                                )
+                            ) {
+                                return (
+                                    <Link
+                                        key={key}
+                                        href={`zano:action=send&address=${offers[index].do}?amount=${offers[index].ap}&comment=${offers[index].t}&hide_sender=true&hide_receiver=true`}
+                                    >
+                                        <div
+                                            className={`${offersStyles.card} bg-gray-900 border-cyan-400 border-2`}
+                                        >
+                                            <div
+                                                className={`${offersStyles.cardHeader} flex grow justify-between bg-gray-800 p-3`}
+                                            >
+                                                <h3 className="text-2xl">
+                                                    {offers[index].ap} $ZANO
+                                                </h3>
+                                                <FaInfoCircle className="text-3xl" />
+                                            </div>
+                                            <div
+                                                className={`${offersStyles.cardImage}`}
+                                            >
+                                                {offers[index].url == "" && (
+                                                    <Image
+                                                        src={NoImage}
+                                                        width={600}
+                                                        height={600}
+                                                        alt={""}
+                                                        as="image"
+                                                        priority={true}
+                                                    />
+                                                )}
+                                                {offers[index].url != "" && (
+                                                    <Image
+                                                        src={`https://ipfs.io/ipfs/${offers[index].url}`}
+                                                        width={600}
+                                                        height={600}
+                                                        alt={""}
+                                                        as="image"
+                                                        priority={true}
+                                                    />
+                                                )}
+                                            </div>
+                                            <div
+                                                className={`${offersStyles.cardBody} p-3 bg-gray-900`}
+                                            >
+                                                <div className="">
+                                                    <h2
+                                                        className={`${{}} text-3xl pb-5`}
+                                                    >
+                                                        <b>{offers[index].t}</b>
+                                                    </h2>
+                                                </div>
+                                                <div className="pb-5">
+                                                    <p>{offers[index].com}</p>
+                                                </div>
+                                            </div>
+
+                                            <div
+                                                className={`${offersStyles.cardFooter}`}
+                                            ></div>
+                                        </div>
+                                    </Link>
+                                );
+                            }
+                        })}
+                    </div>
                 </div>
             )}
         </div>
