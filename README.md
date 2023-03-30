@@ -48,12 +48,22 @@ The Basic account is quick and dirty, and has minimal functionality
 
 Signing up as a vendor is quick and easy, to get started, follow these steps:
 
-
-
 ## Step one:
 
 Navigate to the [vendor registration page](https://zanobazaar.com/register/) and generate your link:
 
 <div align="left">
-    <img title="" src="assets/images/register.png" alt="Mr Zango Image" data-align="center" width="500">
+    <img title="" src="assets/images/register.png" alt="Mr Zango Image" data-align="center" width="700">
 </div>
+
+Once your link is generated, copy it and head over to your [Zano Wallet](https://zano.org/downloads) to set up your vendor account.
+
+## Step 2:
+
+Fire up your [Zano Wallet](https://zano.org/downloads) and copy/pase your generated link into the comments section:
+
+<div align="left">
+    <img title="" src="assets/images/signup.png" alt="Mr Zango Image" data-align="center" width="700">
+</div>
+
+The amount you send dictates which account Tier is set up, this process is automated and cant be undone so make sure you send the correct amount. See the above price Costs and account Tiers section.
