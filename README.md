@@ -58,6 +58,32 @@ Navigate to the [vendor registration page](https://zanobazaar.com/register/) and
 
 Once your link is generated, copy it and head over to your [Zano Wallet](https://zano.org/downloads) to set up your vendor account.
 
+
+
+## IPFS Images
+
+The BaZaar likes people to use IPFS for uploading images, so currently only use IPFS for images or they wont be visable, using IPFS is really easy with [IPFS desktop](https://docs.ipfs.tech/install/ipfs-desktop/).
+
+### Get IPFS Desktop
+
+Head to your package manager or to the [IPFS Desktop Download page](https://docs.ipfs.tech/install/ipfs-desktop/), once you've installed it, fire it up and upload your import to IPFS as follows:
+
+<div align="left">
+    <img title="" src="assets/images/ipfs.png" alt="Mr Zango Image" data-align="center" width="700">
+</div>
+
+#### *Firstly*
+
+*Navigate to files (left hand section of IPFS Desktop GUI)*
+
+#### *Then:*
+
+*click import and select image*
+
+#### *FInally*
+
+*click the 3 dots and copy the CID, you then use this CID when creating your offer.*
+
 ## Step 2:
 
 Fire up your [Zano Wallet](https://zano.org/downloads) and copy/paste your generated link into the comments section:
