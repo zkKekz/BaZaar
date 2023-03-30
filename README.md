@@ -92,6 +92,6 @@ Simply fire up your wallet, and click on the transaction to the BaZaar and copy 
     <img title="" src="assets/images/hash.png" alt="Mr Zango Image" data-align="center" width="700">
 </div>
 
-# Explore
+# Go explore
 
 Nice, youve set up your BaZaar, now go and explore your account and get selling stuffs!
