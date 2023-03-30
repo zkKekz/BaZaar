@@ -35,16 +35,25 @@ export const Links = () => {
                     </Link>
                 </div>
                 <div className={`${styles.socials} flex`}>
-                    <a href="" className={styles.icon}>
+                    <a
+                        href="https://twitter.com/zanobazaar/"
+                        className={styles.icon}
+                    >
                         <FaTwitter />
                     </a>
-                    <a href="" className={styles.icon}>
+                    <a
+                        href="https://discord.com/invite/wE3rmYY"
+                        className={styles.icon}
+                    >
                         <FaDiscord />
                     </a>
-                    <a href="" className={styles.icon}>
+                    <a href="https://t.me/ZanoBazaar/" className={styles.icon}>
                         <FaTelegramPlane />
                     </a>
-                    <a href="" className={styles.icon}>
+                    <a
+                        href="https://github.com/kekzploit/BaZaar"
+                        className={styles.icon}
+                    >
                         <FaGithub />
                     </a>
                 </div>

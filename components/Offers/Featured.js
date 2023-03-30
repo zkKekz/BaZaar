@@ -15,7 +15,7 @@ import NoImage from "../../assets/images/No_image.svg";
 
 export const Featured = () => {
     const [vendorsLoading, setVendorsLoading] = useState(true);
-    const [vendors, setVendors] = useState({});
+    const [vendors, setVendors] = useState(false);
 
     useEffect(() => {
         const fetchVendors = async () => {
@@ -134,6 +134,14 @@ export const Featured = () => {
                             })}
                         </Swiper>
                     </>
+                )}
+
+                {vendors.length <= 0 && (
+                    <div className="">
+                        <h2 className="text-2xl">
+                            No featured vendors to show 😥
+                        </h2>
+                    </div>
                 )}
             </div>
         </div>

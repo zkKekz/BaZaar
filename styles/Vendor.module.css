@@ -22,5 +22,5 @@
 
 .vendorContent {
     align-items: center;
-    /* place-items: center; */
+    place-items: center;
 }

@@ -19,9 +19,12 @@ import {
     FaGithub,
 } from "react-icons/fa";
 
+import { MdEmail } from "react-icons/md";
+MdEmail;
+
 const Vendor = () => {
     const [vendorsLoading, setVendorsLoading] = useState(true);
-    const [vendors, setVendors] = useState({});
+    const [vendors, setVendors] = useState(false);
 
     const [offersLoading, setOffersLoading] = useState(true);
     const [offers, setOffers] = useState({});
@@ -128,7 +131,7 @@ const Vendor = () => {
                             <p className="text-2xl">{vendors[0].description}</p>
                             <div>
                                 <div className="flex pt-5 text-3xl text-center justify-center">
-                                    {vendors[0].socials.twitter == "" && (
+                                    {vendors[0].socials.twitter != "" && (
                                         <Link
                                             className="pl-2 pr-2"
                                             href={vendors[0].socials.twitter}
@@ -138,7 +141,7 @@ const Vendor = () => {
                                         </Link>
                                     )}
 
-                                    {vendors[0].socials.telegram == "" && (
+                                    {vendors[0].socials.telegram != "" && (
                                         <Link
                                             className="pl-2 pr-2"
                                             href={vendors[0].socials.telegram}
@@ -148,7 +151,7 @@ const Vendor = () => {
                                         </Link>
                                     )}
 
-                                    {vendors[0].socials.discord == "" && (
+                                    {vendors[0].socials.discord != "" && (
                                         <Link
                                             className="pl-2 pr-2"
                                             href={vendors[0].socials.discord}
@@ -158,13 +161,23 @@ const Vendor = () => {
                                         </Link>
                                     )}
 
-                                    {vendors[0].socials.github == "" && (
+                                    {vendors[0].socials.github != "" && (
                                         <Link
                                             className="pl-2 pr-2"
                                             href={vendors[0].socials.github}
                                             target="_blank"
                                         >
                                             <FaGithub />
+                                        </Link>
+                                    )}
+
+                                    {vendors[0].socials.email != "" && (
+                                        <Link
+                                            className="pl-2 pr-2"
+                                            href={`mailto:${vendors[0].socials.email}`}
+                                            target="_blank"
+                                        >
+                                            <MdEmail />
                                         </Link>
                                     )}
                                 </div>
