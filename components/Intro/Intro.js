@@ -28,7 +28,7 @@ export const Intro = () => {
                     The Decentralized Marketplace powered by Zano, the
                     surveillance-proof Cryptocurrency.
                 </h1>
-                <Link href="/register" as="image">
+                <Link href="/register">
                     <button className="bg-violet-500 rounded-md p-3 text-xl">
                         Sign up as a Vendor
                     </button>

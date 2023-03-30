@@ -7,10 +7,12 @@ import Link from "next/link";
 
 import styles from "../../styles/Vendor.module.css";
 import offersStyles from "../../styles/Offers.module.css";
+import vendorStyles from "../../styles/Vendor.module.css";
 
 import { FaInfoCircle } from "react-icons/fa";
 
 import NoImage from "../../assets/images/No_image.svg";
+import Oops from "../../assets/images/oops.svg";
 
 import {
     FaTwitter,
@@ -102,7 +104,11 @@ const Vendor = () => {
                 )}
 
                 {!vendorsLoading && vendors.length == 0 && (
-                    <h1 className="text-3xl text-white">Invalid Vendor URL</h1>
+                    <div
+                        className={`${vendorStyles.vendorContent} grid grid-cols-1 align-middle justext-3xl text-white pt-40 pb-40`}
+                    >
+                        <Image src={Oops} alt="" width={800}></Image>
+                    </div>
                 )}
             </div>
 

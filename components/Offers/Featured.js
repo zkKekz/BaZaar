@@ -17,6 +17,8 @@ export const Featured = () => {
     const [vendorsLoading, setVendorsLoading] = useState(true);
     const [vendors, setVendors] = useState(false);
 
+    const [featuredVendors, setFeaturedVendors] = useState([]);
+
     useEffect(() => {
         const fetchVendors = async () => {
             try {
@@ -95,51 +97,58 @@ export const Featured = () => {
                         >
                             {Object.entries(vendors).map((key, index) => {
                                 return (
-                                    <SwiperSlide key={key} className="">
-                                        <div className="border-2 rounded-t-md border-indigo-500 ">
-                                            <div
-                                                className={`${styles.cardContainer}  p-2 rounded-t-md border-b-2 border-b-indigo-500`}
-                                            >
-                                                <h3 className="text-xl text-white text-center">
-                                                    <b>
-                                                        {vendors[index].title}
-                                                    </b>
-                                                </h3>
-                                            </div>
-                                            {vendors[index].image == "" && (
-                                                <Link
-                                                    href={`vendor/${vendors[index].url}`}
-                                                >
-                                                    <Image
-                                                        src={NoImage}
-                                                        className="`"
-                                                        width={600}
-                                                        height={600}
-                                                        alt={""}
-                                                        as="image"
-                                                        priority={true}
-                                                    />
-                                                </Link>
-                                            )}
-                                            {vendors[index].image != "" && (
-                                                <Link
-                                                    href={`vendor/${vendors[index].url}`}
-                                                >
-                                                    <Image
-                                                        src={`https://ipfs.io/ipfs/${vendors[index].image}`}
-                                                        width={600}
-                                                        height={600}
-                                                        alt={""}
-                                                        as="image"
-                                                        priority={true}
-                                                    />
-                                                </Link>
-                                            )}
-                                        </div>
-                                        {/* <div className="bg-violet-500 p-2 rounded-b-md">
-                                            Hey
-                                        </div> */}
-                                    </SwiperSlide>
+                                    <>
+                                        {vendors[index].type == "featured" && (
+                                            <SwiperSlide key={key}>
+                                                <div className="border-2 rounded-t-md border-indigo-500 ">
+                                                    <div
+                                                        className={`${styles.cardContainer}  p-2 rounded-t-md border-b-2 border-b-indigo-500`}
+                                                    >
+                                                        <h3 className="text-xl text-white text-center">
+                                                            <b>
+                                                                {
+                                                                    vendors[
+                                                                        index
+                                                                    ].title
+                                                                }
+                                                            </b>
+                                                        </h3>
+                                                    </div>
+                                                    {vendors[index].image ==
+                                                        "" && (
+                                                        <Link
+                                                            href={`vendor/${vendors[index].url}`}
+                                                        >
+                                                            <Image
+                                                                src={NoImage}
+                                                                className="`"
+                                                                width={600}
+                                                                height={600}
+                                                                alt={""}
+                                                                as="image"
+                                                                priority={true}
+                                                            />
+                                                        </Link>
+                                                    )}
+                                                    {vendors[index].image !=
+                                                        "" && (
+                                                        <Link
+                                                            href={`vendor/${vendors[index].url}`}
+                                                        >
+                                                            <Image
+                                                                src={`https://ipfs.io/ipfs/${vendors[index].image}`}
+                                                                width={600}
+                                                                height={600}
+                                                                alt={""}
+                                                                as="image"
+                                                                priority={true}
+                                                            />
+                                                        </Link>
+                                                    )}
+                                                </div>
+                                            </SwiperSlide>
+                                        )}
+                                    </>
                                 );
                             })}
                         </Swiper>
