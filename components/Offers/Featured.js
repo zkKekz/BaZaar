@@ -96,9 +96,9 @@ export const Featured = () => {
                             {Object.entries(vendors).map((key, index) => {
                                 return (
                                     <SwiperSlide key={key} className="">
-                                        <div className="border-2 rounded-t-md border-indigo-500">
+                                        <div className="border-2 rounded-t-md border-indigo-500 ">
                                             <div
-                                                className={`${styles.cardContainer} bg-violet-900 p-2 rounded-t-md`}
+                                                className={`${styles.cardContainer}  p-2 rounded-t-md border-b-2 border-b-indigo-500`}
                                             >
                                                 <h3 className="text-xl text-white text-center">
                                                     <b>

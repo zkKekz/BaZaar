@@ -66,7 +66,7 @@ export const Offers = () => {
             {offers && (
                 <div className="pl-5 pr-5 pt-8 md:ml-20 md:mr-20 lg:ml-40 lg:mr-40">
                     <div
-                        className={`${styles.cardContainer} grid gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 `}
+                        className={`grid gap-5 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 `}
                     >
                         {Object.entries(offers).map((key, index) => {
                             return (
