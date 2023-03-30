@@ -14,7 +14,7 @@ To Help combat spam vendor signups, a small, reasonable ZANO cost has been imple
 
 Be aware, this document is a work in progress and will be continuously updated as features are added and has been tested more in the wild!
 
-## Tier: "Featured"" - 100 $ZANO
+## Tier: "Featured - 100 $ZANO
 
 The Featured Tier will provide full current and future functionality, some features include:
 
@@ -39,3 +39,21 @@ The Enhanced tier will provide elevated functionality from the basic account, so
 ## Tier: "Basic"" - 20 $ZANO
 
 The Basic account is quick and dirty, and has minimal functionality
+
+- Display email contact on vendor page
+
+**NOTE: Tier costs and feature are subject to change as features are added**
+
+## Usage - vendor sign up
+
+Signing up as a vendor is quick and easy, to get started, follow these steps:
+
+
+
+## Step one:
+
+Navigate to the [vendor registration page](https://zanobazaar.com/register/) and generate your link:
+
+<div align="left">
+    <img title="" src="assets/images/register.png" alt="Mr Zango Image" data-align="center" width="500">
+</div>
