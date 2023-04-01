@@ -137,3 +137,13 @@ Take a look at the above [marketplace offer struccture](https://docs.zano.org/re
 # Remember, you're early!
 
 Zano BaZaar is in its infancy, so make sure to report any issues, suggestions or ideas, you can do this over on [Telegram](https://t.me/ZanoBazaar) or just head over to [Zano's Discord](https://discord.com/invite/wE3rmYY) server where you can usually find me (kekzploit).
+
+# Donating to the BaZaar and wider Zano ecosystem
+
+zAnons, if you appreciate the work going into enriching the zano ecosystem and attempts to further Zano's cause, feel free to ping across a donation, it makes the late nights worth it and helps towards dev time and ongoing hosting fees which.
+
+Appreciate you guys!
+
+## Zano donation address:
+
+ZxDNaMeZjwCjnHuU5gUNyrP1pM3U5vckbakzzV6dEHyDYeCpW8XGLBFTshcaY8LkG9RQn7FsQx8w2JeJzJwPwuDm2NfixPAXf 
