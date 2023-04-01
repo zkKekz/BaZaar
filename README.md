@@ -122,11 +122,17 @@ Nice, you've set up your BaZaar, now go and explore your account and get selling
 
 # How to POST offers to the Blockchain
 
-Currently there is no simple GUI to post offers, this functionality should be included within the net wallet update, however I will be developing a simple one which will be with us soon. In the mean time, I personally use a program called [Insomnia](https://insomnia.rest/download) which allows you to send POST requests, its really easy.
+Currently there is no simple GUI to post offers to the blockchain, this functionality should be included within the net wallet update, however I will be developing a simple one which will be with us soon.
 
-In order to use insomnia, you need to be using CLI daemon and wallet, I wont go in depth of how to get those set up, but you can find an easy to follow guide [here](https://docs.zano.org/docs/install-a-zano-cli-wallet-ubuntu)
+In the mean time, I personally use a program called [Insomnia](https://insomnia.rest/download) which allows you to send POST requests, its really easy.
+
+In order to use insomnia, you need to be using CLI daemon and wallet, I wont go in depth on how to get those set up, but you can find an easy to follow guide [here](https://docs.zano.org/docs/install-a-zano-cli-wallet-ubuntu)
 
 ![Mr Zango Image](assets/images/post.png)
+
+Take a look at the above [marketplace offer struccture](https://docs.zano.org/reference/marketplace-offer-structure-and-description), the Bazaar pretty much follows the strcture laid out by Zano.
+
+**NOTE: The Bazaar utilizes the "url" parameter for the vendor IPFS image CID**
 
 # Remember, you're early!
 
