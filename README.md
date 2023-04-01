@@ -70,17 +70,17 @@ Head to your package manager or to the [IPFS Desktop Download page](https://docs
     <img title="" src="assets/images/ipfs.png" alt="Mr Zango Image" data-align="center" width="700">
 </div>
 
-#### *Firstly*
+#### _Firstly_
 
-*Navigate to files (left hand section of IPFS Desktop GUI)*
+_Navigate to files (left hand section of IPFS Desktop GUI)_
 
-#### *Then:*
+#### _Then:_
 
-*click import and select image*
+_click import and select image_
 
-#### *FInally*
+#### _FInally_
 
-*click the 3 dots and copy the CID, you then use this CID when creating your offer.*
+_click the 3 dots and copy the CID, you then use this CID when creating your offer._
 
 ## Step 2:
 
@@ -120,7 +120,13 @@ Simply fire up your wallet, and click on the transaction to the BaZaar and copy 
 
 Nice, you've set up your BaZaar, now go and explore your account and get selling stuffs!
 
+# How to POST offers to the Blockchain
 
+Currently there is no simple GUI to post offers, this functionality should be included within the net wallet update, however I will be developing a simple one which will be with us soon. In the mean time, I personally use a program called [Insomnia](https://insomnia.rest/download) which allows you to send POST requests, its really easy.
+
+In order to use insomnia, you need to be using CLI daemon and wallet, I wont go in depth of how to get those set up, but you can find an easy to follow guide [here](https://docs.zano.org/docs/install-a-zano-cli-wallet-ubuntu)
+
+![Mr Zango Image](assets/images/post.png)
 
 # Remember, you're early!
 
