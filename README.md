@@ -136,7 +136,7 @@ In order to use insomnia, you need to be using CLI daemon and wallet, I wont go 
 
 Take a look at the above [marketplace offer struccture](https://docs.zano.org/reference/marketplace-offer-structure-and-description), the Bazaar pretty much follows the strcture laid out by Zano.
 
-**NOTE: The Bazaar utilizes the "url" parameter for the vendor IPFS image CID**
+**NOTE: The Bazaar utilizes the "url" parameter for the vendor IPFS image CID and the "do" parameter as your receive address**
 
 # Remember, you're early!
 
