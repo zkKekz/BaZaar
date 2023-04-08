@@ -6,7 +6,7 @@
 
 Zano BaZaar is built on Zano and utilizes Zano's Marketplace API, there is little to no centralization on BaZaar and all offers are contained on the Zano Blockchain itself.
 
-**NOTE: This document is a work in progress and will be ontinually updated as features are added and battle tested in the wild!**
+**NOTE: This document is a work in progress and will be continually updated as features are added and battle tested in the wild!**
 
 # Cost and usage
 
