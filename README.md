@@ -98,6 +98,10 @@ Now send your transaction to the BaZaars address:
 
 **ZxCH88NJ8sc5hs7eZ813BafmEUY7P1p8V4rEa9KndjWAbMNburuqnwXHruYRfwmqY6LF8fbhK8u7vXAusQYWSpiV1o8KS7X5h**
 
+OR
+
+**Alias: @bazaar** 
+
 ## Congratulations, your BaZaar is set up!
 
 Once the transaction is confirmed on the blockchain, your BaZaar will be visibile and youll be able to log in.
